@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TextInput } from 'react-native';
+import { Text, View, Image, TextInput, Button } from 'react-native';
 import List from './List';
 
 class App extends Component {
@@ -7,8 +7,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: ["foo", "bar", "baz"],
-      text: 'yeet'
+      items: [],
+      text: ''
     };
   }
 
@@ -16,6 +16,28 @@ class App extends Component {
     var oldState = this.state;
     var newState = oldState;
     newState.text = text;
+    this.setState(newState);
+  }
+
+  handleAddItem() {
+
+    // Get state
+    var oldState = this.state;
+    var newState = oldState;
+
+    // Get todo list items
+    var oldList = this.state.items;
+    var newList = oldList.slice();
+
+    // Add new item to todo list
+    var indexOfNewItem = newList.length;
+    newList[indexOfNewItem] = this.state.text;
+    newState.items = newList;
+
+    // Remove submitted text from TextInput
+    newState.text = '';
+    
+    // Set state
     this.setState(newState);
   }
 
@@ -38,6 +60,10 @@ class App extends Component {
         <TextInput
           placeholder="Enter TODO List Items Here"
           onChangeText={ (text) => this.handleOnChangeText(text) }/>
+
+        <Button 
+          onPress={ () => this.handleAddItem() }
+          title="Add"/>
 
       </View>
     );

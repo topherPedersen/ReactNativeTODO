@@ -8,7 +8,9 @@ class Item extends Component {
     return (
       <View>
         <Text>{this.props.itemText}</Text>
-        <Button title="REMOVE" />
+        <Button 
+          title="REMOVE" 
+          onPress={ () => this.props.removeItem(this.props.itemText) } />
       </View>
     );
   }

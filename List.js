@@ -13,7 +13,13 @@ class List extends Component {
     // empty list as a <Text/> component
     for (var i = 0; i < this.props.items.length; i++) {
       // listItemElements.push(<Text> {this.props.items[i]} </Text>);
-      listItemElements.push(<Item itemText={this.props.items[i]} />);
+      listItemElements.push(
+        <View>
+          <Item 
+            itemText={this.props.items[i]} 
+            removeItem={ (itemToBeRemoved) => this.props.removeItem(itemToBeRemoved) } />
+        </View>
+      );
     }
 
     // Return our todo list items as an array of <Text/> 

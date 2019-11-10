@@ -41,6 +41,28 @@ class App extends Component {
     this.setState(newState);
   }
 
+  handleRemoveItem(itemToBeRemoved) {
+
+    // Get state
+    var oldState = this.state;
+    var newState = oldState;
+
+    // Create new empty list which will hold all
+    // of our previous todo items EXCEPT the itemToBeRemoved
+    var newList = new Array();
+    var numberOfItems = this.state.items.length;
+    for (var i = 0; i < numberOfItems; i++) {
+      if (this.state.items[i] !== itemToBeRemoved) {
+        var indexOfNextItem = newList.length;
+        newList[indexOfNextItem] = this.state.items[i]
+      }
+    }
+    newState.items = newList;
+
+    // Set state
+    this.setState(newState);
+  }
+
   // TODO: create addItemToList() function
 
   // TODO: create removeItemFromList() function
@@ -51,7 +73,9 @@ class App extends Component {
 
         <Text>ReactNativeTODO</Text>
 
-        <List items={ this.state.items } />
+        <List 
+          items={ this.state.items } 
+          removeItem={ (itemToBeRemoved) => this.handleRemoveItem(itemToBeRemoved) } />
 
         <Text>----------------------</Text>
         <Text>{this.state.text}</Text>

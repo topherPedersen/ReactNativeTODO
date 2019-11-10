@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
+import Item from './Item';
+
 
 class List extends Component {
   render() {
@@ -10,7 +12,8 @@ class List extends Component {
     // Iterate over this.props.items, and add each item to our
     // empty list as a <Text/> component
     for (var i = 0; i < this.props.items.length; i++) {
-      listItemElements.push(<Text>{this.props.items[i]}</Text>);
+      // listItemElements.push(<Text> {this.props.items[i]} </Text>);
+      listItemElements.push(<Item itemText={this.props.items[i]} />);
     }
 
     // Return our todo list items as an array of <Text/> 

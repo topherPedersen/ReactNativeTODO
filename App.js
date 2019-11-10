@@ -64,7 +64,7 @@ class App extends Component {
 
         <Button 
           onPress={ () => this.handleAddItem() }
-          title="Add"/>
+          title="ADD"/>
 
       </View>
     );

@@ -59,7 +59,8 @@ class App extends Component {
 
         <TextInput
           placeholder="Enter TODO List Items Here"
-          onChangeText={ (text) => this.handleOnChangeText(text) }/>
+          onChangeText={ (text) => this.handleOnChangeText(text) }
+          value={this.state.text} />
 
         <Button 
           onPress={ () => this.handleAddItem() }

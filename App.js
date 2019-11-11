@@ -69,27 +69,30 @@ class App extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{flex: 1, flexDirection: 'column'}}>
+        
+        {/* Navbar */}
+        <View style={{flex: 15, flexDirection: 'row'}}>
+          <Text>ReactNativeTODO</Text>
+        </View>
 
-        <Text>ReactNativeTODO</Text>
+        {/* Body */}
+        <View style={{flex: 85, flexDirection: 'row'}}>
+          <List 
+            items={ this.state.items } 
+            removeItem={ (itemToBeRemoved) => this.handleRemoveItem(itemToBeRemoved) } />
+        </View>
 
-        <List 
-          items={ this.state.items } 
-          removeItem={ (itemToBeRemoved) => this.handleRemoveItem(itemToBeRemoved) } />
-
-        <Text>----------------------</Text>
-        <Text>{this.state.text}</Text>
-        <Text>----------------------</Text>
-
-        <TextInput
-          placeholder="Enter TODO List Items Here"
-          onChangeText={ (text) => this.handleOnChangeText(text) }
-          value={this.state.text} />
-
-        <Button 
-          onPress={ () => this.handleAddItem() }
-          title="ADD"/>
-
+        {/* Bottom Bar */}
+        <View style={{flex: 15, flexDirection: 'row'}}>
+          <TextInput
+            placeholder="Enter TODO List Items Here"
+            onChangeText={ (text) => this.handleOnChangeText(text) }
+            value={this.state.text} />
+          <Button 
+            onPress={ () => this.handleAddItem() }
+            title="ADD"/>
+          </View>
       </View>
     );
   }

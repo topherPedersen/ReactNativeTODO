@@ -72,7 +72,6 @@ class App extends Component {
       <ApplicationProvider mapping={mapping} theme={lightTheme}>
 
         <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <View style={{flex: 1, flexDirection: 'column'}}>          
 
             <View style={{flex: 15, flexDirection: 'row'}}>
               <Text category="h4">ReactNativeTODO</Text>
@@ -98,7 +97,6 @@ class App extends Component {
               </View>
             </View>
 
-          </View>
         </Layout>
 
       </ApplicationProvider>

@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import { View, Image, TextInput, Button } from 'react-native';
+import { View, Image, TextInput, Button, StyleSheet } from 'react-native';
 import { mapping, light as lightTheme } from '@eva-design/eva';
-import { ApplicationProvider, Layout, Text } from 'react-native-ui-kitten';
+import { 
+  ApplicationProvider, 
+  Layout, 
+  Text,
+  TopNavigation,
+  TopNavigationAction
+} from 'react-native-ui-kitten';
 import List from './List';
 
 class App extends Component {
@@ -65,25 +71,16 @@ class App extends Component {
     // Set state
     this.setState(newState);
   }
-  
-
-  const styles = StyleSheet.create({
-    container: { 
-      flex: 1, 
-      alignItems: 'center'
-    },
-    text: { marginVertical: 16 }
-  });
 
   render() {
     return (
       <ApplicationProvider mapping={mapping} theme={lightTheme}>
 
-        <Layout style={style.container}>
+        <Layout>
 
-            <View style={{flex: 15, flexDirection: 'row'}}>
-              <Text category="h4">ReactNativeTODO</Text>
-            </View>
+            <TopNavigation 
+              alignment='center'
+              title="ReactNativeTODO?" />
 
             <View style={{flex: 85, flexDirection: 'row'}}>
               <List 
@@ -111,5 +108,12 @@ class App extends Component {
     );
   }
 }
+
+/*
+const styles = StyleSheet.create({
+  container: { flex: 1, alignItems: 'center' },
+  text: { marginVertical: 16 },
+});
+*/
 
 export default App;

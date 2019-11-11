@@ -82,20 +82,20 @@ class App extends Component {
               alignment='center'
               title="ReactNativeTODO?" />
 
-            <View style={{flex: 85, flexDirection: 'row'}}>
+            <View>
               <List 
                 items={ this.state.items } 
                 removeItem={ (itemToBeRemoved) => this.handleRemoveItem(itemToBeRemoved) } />
             </View>
 
-            <View style={{flex: 15, flexDirection: 'row'}}>
-              <View style={{flex: 75}}>
+            <View>
+              <View>
                 <TextInput
                   placeholder="Enter TODO List Items Here"
                   onChangeText={ (text) => this.handleOnChangeText(text) }
                   value={this.state.text} />
               </View>
-              <View style={{flex: 25}}>
+              <View>
                 <Button 
                   onPress={ () => this.handleAddItem() }
                   title="ADD"/>
@@ -108,12 +108,5 @@ class App extends Component {
     );
   }
 }
-
-/*
-const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center' },
-  text: { marginVertical: 16 },
-});
-*/
 
 export default App;

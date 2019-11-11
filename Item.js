@@ -8,11 +8,11 @@ class Item extends Component {
     // Return our todo list items as an array of <Text/> 
     // components to be rendered on screen
     return (
-      <View style={{flexDirection: 'row'}}>
+      <View>
         <View>
           <Text>{this.props.itemText}</Text>
         </View>
-        <View style={{paddingLeft: 25}}>
+        <View>
           <Button 
             title="REMOVE" 
             onPress={ () => this.props.removeItem(this.props.itemText) } />

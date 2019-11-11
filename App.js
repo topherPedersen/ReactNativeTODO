@@ -67,11 +67,19 @@ class App extends Component {
   }
   
 
+  const styles = StyleSheet.create({
+    container: { 
+      flex: 1, 
+      alignItems: 'center'
+    },
+    text: { marginVertical: 16 }
+  });
+
   render() {
     return (
       <ApplicationProvider mapping={mapping} theme={lightTheme}>
 
-        <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Layout style={style.container}>
 
             <View style={{flex: 15, flexDirection: 'row'}}>
               <Text category="h4">ReactNativeTODO</Text>

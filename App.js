@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TextInput, Button } from 'react-native';
+import { View, Image, TextInput, Button } from 'react-native';
+import { mapping, light as lightTheme } from '@eva-design/eva';
+import { ApplicationProvider, Layout, Text } from 'react-native-ui-kitten';
 import List from './List';
 
 class App extends Component {
 
+  /*
   constructor(props) {
     super(props);
     this.state = {
@@ -62,42 +65,48 @@ class App extends Component {
     // Set state
     this.setState(newState);
   }
-
-  // TODO: create addItemToList() function
-
-  // TODO: create removeItemFromList() function
+  */
 
   render() {
     return (
-      <View style={{flex: 1, flexDirection: 'column'}}>
-        
-        {/* Navbar */}
-        <View style={{flex: 15, flexDirection: 'row'}}>
-          <Text>ReactNativeTODO</Text>
-        </View>
+      <ApplicationProvider mapping={mapping} theme={lightTheme}>
 
-        {/* Body */}
-        <View style={{flex: 85, flexDirection: 'row'}}>
-          <List 
-            items={ this.state.items } 
-            removeItem={ (itemToBeRemoved) => this.handleRemoveItem(itemToBeRemoved) } />
-        </View>
+        {/*
+        <View style={{flex: 1, flexDirection: 'column'}}>
+          
 
-        {/* Bottom Bar */}
-        <View style={{flex: 15, flexDirection: 'row'}}>
-          <View style={{flex: 75}}>
-            <TextInput
-              placeholder="Enter TODO List Items Here"
-              onChangeText={ (text) => this.handleOnChangeText(text) }
-              value={this.state.text} />
+          <View style={{flex: 15, flexDirection: 'row'}}>
+            <Text>ReactNativeTODO</Text>
           </View>
-          <View style={{flex: 25}}>
-            <Button 
-              onPress={ () => this.handleAddItem() }
-              title="ADD"/>
+
+          <View style={{flex: 85, flexDirection: 'row'}}>
+            <List 
+              items={ this.state.items } 
+              removeItem={ (itemToBeRemoved) => this.handleRemoveItem(itemToBeRemoved) } />
           </View>
+
+          <View style={{flex: 15, flexDirection: 'row'}}>
+            <View style={{flex: 75}}>
+              <TextInput
+                placeholder="Enter TODO List Items Here"
+                onChangeText={ (text) => this.handleOnChangeText(text) }
+                value={this.state.text} />
+            </View>
+            <View style={{flex: 25}}>
+              <Button 
+                onPress={ () => this.handleAddItem() }
+                title="ADD"/>
+            </View>
+          </View>
+
         </View>
-      </View>
+        */}
+
+        <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <Text>Hello, UI Kitten!</Text>
+        </Layout>
+
+      </ApplicationProvider>
     );
   }
 }

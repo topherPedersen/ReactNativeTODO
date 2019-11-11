@@ -1,5 +1,8 @@
+/*
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { View, Image } from 'react-native';
+import { mapping, light as lightTheme } from '@eva-design/eva';
+import { ApplicationProvider, Layout, Text } from 'react-native-ui-kitten';
 import Item from './Item';
 
 
@@ -31,3 +34,4 @@ class List extends Component {
 }
 
 export default List;
+*/

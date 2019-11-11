@@ -1,5 +1,8 @@
+/*
 import React, { Component } from 'react';
-import { Text, View, Image, Button } from 'react-native';
+import { View, Image, Button } from 'react-native';
+import { mapping, light as lightTheme } from '@eva-design/eva';
+import { ApplicationProvider, Layout, Text } from 'react-native-ui-kitten';
 
 class Item extends Component {
   render() {
@@ -21,3 +24,4 @@ class Item extends Component {
 }
 
 export default Item;
+*/

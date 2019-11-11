@@ -1,4 +1,3 @@
-/*
 import React, { Component } from 'react';
 import { View, Image } from 'react-native';
 import { mapping, light as lightTheme } from '@eva-design/eva';
@@ -34,4 +33,3 @@ class List extends Component {
 }
 
 export default List;
-*/

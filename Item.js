@@ -1,4 +1,3 @@
-/*
 import React, { Component } from 'react';
 import { View, Image, Button } from 'react-native';
 import { mapping, light as lightTheme } from '@eva-design/eva';
@@ -24,4 +23,3 @@ class Item extends Component {
 }
 
 export default Item;
-*/

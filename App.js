@@ -71,42 +71,11 @@ class App extends Component {
     return (
       <ApplicationProvider mapping={mapping} theme={lightTheme}>
 
-        {/*
-        <View style={{flex: 1, flexDirection: 'column'}}>
-          
-
-          <View style={{flex: 15, flexDirection: 'row'}}>
-            <Text>ReactNativeTODO</Text>
-          </View>
-
-          <View style={{flex: 85, flexDirection: 'row'}}>
-            <List 
-              items={ this.state.items } 
-              removeItem={ (itemToBeRemoved) => this.handleRemoveItem(itemToBeRemoved) } />
-          </View>
-
-          <View style={{flex: 15, flexDirection: 'row'}}>
-            <View style={{flex: 75}}>
-              <TextInput
-                placeholder="Enter TODO List Items Here"
-                onChangeText={ (text) => this.handleOnChangeText(text) }
-                value={this.state.text} />
-            </View>
-            <View style={{flex: 25}}>
-              <Button 
-                onPress={ () => this.handleAddItem() }
-                title="ADD"/>
-            </View>
-          </View>
-
-        </View>
-        */}
-
         <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
           <View style={{flex: 1, flexDirection: 'column'}}>          
 
             <View style={{flex: 15, flexDirection: 'row'}}>
-              <Text>ReactNativeTODO</Text>
+              <Text category="h4">ReactNativeTODO</Text>
             </View>
 
             <View style={{flex: 85, flexDirection: 'row'}}>

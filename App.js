@@ -85,14 +85,18 @@ class App extends Component {
 
         {/* Bottom Bar */}
         <View style={{flex: 15, flexDirection: 'row'}}>
-          <TextInput
-            placeholder="Enter TODO List Items Here"
-            onChangeText={ (text) => this.handleOnChangeText(text) }
-            value={this.state.text} />
-          <Button 
-            onPress={ () => this.handleAddItem() }
-            title="ADD"/>
+          <View style={{flex: 75}}>
+            <TextInput
+              placeholder="Enter TODO List Items Here"
+              onChangeText={ (text) => this.handleOnChangeText(text) }
+              value={this.state.text} />
           </View>
+          <View style={{flex: 25}}>
+            <Button 
+              onPress={ () => this.handleAddItem() }
+              title="ADD"/>
+          </View>
+        </View>
       </View>
     );
   }
